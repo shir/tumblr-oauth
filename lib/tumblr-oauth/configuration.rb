@@ -6,7 +6,8 @@ module TumblrOAuth
       :endpoint,
       :oauth_token,
       :oauth_token_secret,
-      :blog_host
+      :blog_host,
+      :debug
     ].freeze
 
     # By default, don't set an application key
@@ -27,6 +28,9 @@ module TumblrOAuth
 
     # By default don't set blog_host
     DEFAULT_BLOG_HOST = nil
+
+    # Disable debug output by default
+    DEFAULT_DEBUG = false
 
     # @private
     attr_accessor *VALID_OPTIONS_KEYS
@@ -54,6 +58,7 @@ module TumblrOAuth
       self.oauth_token        = DEFAULT_OAUTH_TOKEN
       self.oauth_token_secret = DEFAULT_OAUTH_TOKEN_SECRET
       self.blog_host          = DEFAULT_BLOG_HOST
+      self.debug              = DEFAULT_DEBUG
       self
     end
   end

@@ -16,7 +16,7 @@ module TumblrOAuth
         builder.use Faraday::Request::UrlEncoded
         builder.use Faraday::Response::Mashify
         builder.use Faraday::Response::ParseJson
-        builder.use Faraday::Response::Logger
+        builder.use Faraday::Response::Logger if debug
         builder.use Faraday::Adapter::NetHttp
         builder.adapter Faraday.default_adapter
       end
