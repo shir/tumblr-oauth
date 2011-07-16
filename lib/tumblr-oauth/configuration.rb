@@ -5,7 +5,9 @@ module TumblrOAuth
       :consumer_secret,
       :endpoint,
       :oauth_token,
-      :oauth_token_secret].freeze
+      :oauth_token_secret,
+      :blog_host
+    ].freeze
 
     # By default, don't set an application key
     DEFAULT_CONSUMER_KEY = nil
@@ -22,6 +24,9 @@ module TumblrOAuth
 
     # By default, don't set a user oauth secret
     DEFAULT_OAUTH_TOKEN_SECRET = nil
+
+    # By default don't set blog_host
+    DEFAULT_BLOG_HOST = nil
 
     # @private
     attr_accessor *VALID_OPTIONS_KEYS
@@ -48,6 +53,7 @@ module TumblrOAuth
       self.endpoint           = DEFAULT_ENDPOINT
       self.oauth_token        = DEFAULT_OAUTH_TOKEN
       self.oauth_token_secret = DEFAULT_OAUTH_TOKEN_SECRET
+      self.blog_host          = DEFAULT_BLOG_HOST
       self
     end
   end
