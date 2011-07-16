@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "tumblr-oauth"
-  gem.homepage = "http://github.com/IldarShaynurov/tumblr-oauth"
+  gem.homepage = "http://github.com/shir/tumblr-oauth"
   gem.license = "MIT"
   gem.summary = %Q{Tumblr library with OAuth support}
   gem.description = %Q{TODO: longer description of your gem}
