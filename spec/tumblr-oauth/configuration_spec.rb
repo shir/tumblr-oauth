@@ -25,6 +25,10 @@ describe TumblrOAuth::Configuration do
     TumblrOAuth.oauth_token_secret.should be_nil
   end
 
+  it 'should set blog host to nil by default' do
+    TumblrOAuth.blog_host.should be_nil
+  end
+
   it 'should allow to set own values for consumer key and secret' do
     consumer_key    = 'consumer_key'
     consumer_secret = 'consumer_secret'
