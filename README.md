@@ -3,6 +3,8 @@ tumblr-oauth
 
 Tumblr ruby gem with OAuth support.
 
+It's very raw and unstable version.
+
 Install
 ------
 
