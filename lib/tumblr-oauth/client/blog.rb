@@ -9,6 +9,10 @@ module TumblrOAuth
         blog_request(:get, 'avatar')
       end
 
+      def followers
+        blog_request(:get, 'followers', :oauth)
+      end
+
       private
 
       def blog_request(method, path, auth_type = :none)
@@ -17,7 +21,6 @@ module TumblrOAuth
           when :api_key
             "?api_key=#{consumer_key}"
           when :oauth
-            # TODO: Require oauth authorization
             ''
           else
             ''
