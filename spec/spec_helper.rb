@@ -14,6 +14,6 @@ RSpec.configure do |config|
     config.oauth_token        = ''
     config.oauth_token_secret = ''
     config.blog_host          = ''
-    config.debug              = true
+    config.debug              = false
   end
 end
