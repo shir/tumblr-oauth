@@ -1,6 +1,6 @@
 require 'tumblr-oauth/configuration'
 require 'tumblr-oauth/client'
-require 'tumblr-oauth/errors'
+require 'tumblr-oauth/error'
 
 module TumblrOAuth
   extend Configuration

@@ -13,7 +13,7 @@ describe TumblrOAuth::Client::Blog do
 
     it 'should raise error if consumer key is bad' do
       # TODO: stub request
-      expect { bad_oauth_client.info }.to raise_error
+      expect { bad_oauth_client.info }.to raise_error(TumblrOAuth::Unauthorized)
     end
   end
 
@@ -27,12 +27,12 @@ describe TumblrOAuth::Client::Blog do
   describe '#followers' do
     it 'should not raise error' do
       # TODO: stub request
-      expect { p client.followers }.to_not raise_error
+      expect { client.followers }.to_not raise_error
     end
 
     it 'should raise error if oauth data are bad' do
       # TODO: stub request
-      expect { non_authorized_client.followers }.to raise_error
+      expect { non_authorized_client.followers }.to raise_error(TumblrOAuth::Unauthorized)
     end
   end
 end

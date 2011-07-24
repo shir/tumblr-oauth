@@ -1,4 +1,6 @@
 require 'faraday_middleware'
+require 'faraday/response/raise_http_4xx'
+require 'faraday/response/raise_http_5xx'
 
 module TumblrOAuth
   # @private
@@ -17,7 +19,8 @@ module TumblrOAuth
         builder.use Faraday::Response::Mashify
         builder.use Faraday::Response::ParseJson
         builder.use Faraday::Response::Logger if debug
-        builder.use Faraday::Response::RaiseError
+        builder.use Faraday::Response::RaiseHttp4xx
+        builder.use Faraday::Response::RaiseHttp4xx
         builder.adapter Faraday.default_adapter
       end
     end
